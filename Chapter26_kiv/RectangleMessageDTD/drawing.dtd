@@ -1,0 +1,13 @@
+<!ELEMENT drawing (rectangle*, line*, message*)>
+<!ELEMENT rectangle (x, y, width, height)>
+<!ELEMENT line (x1, y1, x2, y2)>
+<!ELEMENT message (text, x, y)>
+<!ELEMENT x (#PCDATA)>
+<!ELEMENT y (#PCDATA)>
+<!ELEMENT x1 (#PCDATA)>
+<!ELEMENT y1 (#PCDATA)>
+<!ELEMENT x2 (#PCDATA)>
+<!ELEMENT y2 (#PCDATA)>
+<!ELEMENT width (#PCDATA)>
+<!ELEMENT height (#PCDATA)>
+<!ELEMENT text (#PCDATA)>

@@ -1,0 +1,4 @@
+quarter 0.25
+dime 0.10
+bogus 0.02
+penny 0.01

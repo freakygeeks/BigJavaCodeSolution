@@ -1,0 +1,4 @@
+<!ELEMENT purse (coin*)>
+<!ELEMENT coin (value, name)>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT name (#PCDATA)>

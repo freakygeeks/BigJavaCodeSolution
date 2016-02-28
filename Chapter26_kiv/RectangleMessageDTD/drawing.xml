@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE drawing SYSTEM "drawing.dtd">
+<drawing>
+	<rectangle>
+		<x>5</x>
+		<y>10</y>
+		<width>20</width>
+		<height>30</height>
+	</rectangle>
+	<line>
+		<x1>5</x1>
+		<y1>10</y1>
+		<x2>25</x2>
+		<y2>40</y2>
+	</line>
+	<message>
+		<text>Hello, World!</text>
+		<x>20</x>
+		<y>30</y>
+	</message>
+</drawing>

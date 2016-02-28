@@ -1,0 +1,86 @@
+Requirements
+P7.13 Add a method getWinner to the TicTacToe class of Section 7.8. It should return "x" or "o" to indicate a winner, or " " if there is no winner yet. Recall that a winning position has three matching marks in a row, column, or diagonal.
+Disclaimer 
+
+There are many ways to solve a problem.
+I do not post codes before the due date, since that does not help you.
+Codes may be incorrect because I am also a learner like you. Use it at your discretion.
+ Guidelines 
+1. Your method should perform 4 checks
+Check each row.
+Check each column.
+Check top-left to bottom-right diagonal.
+Check top-right to bottom-left diagonal. 
+2. In the game runner
+Check for occupied space, if a space on the board is occupied, player should be prompted to select new row and column.
+Check total moves to print a draw result
+
+Pseudocode 
+
+//// playerWon method
+INITIALIZE playerWon to false
+INITIALIZE count to zero 
+// Check for the same player on the same row
+FOR each row on the board
+ FOR each column on the board
+  IF player EQUALS board element(row,column) THEN
+   INCREMENT count
+  END IF
+ END FOR
+ // Check if player wins
+ IF count EQUALS 3 THEN
+  SET playerWon to true
+  stop checking for next case
+ END IF
+ SET count to zero
+END FOR 
+// Check for the same player on the same column
+IF NOT playerWon
+ FOR each column on the board
+  FOR each row on the board
+   IF player EQUALS board element(column,row) THEN
+    INCREMENT count
+   END IF
+  END FOR
+  // Check if player wins
+  IF count EQUALS 3 THEN
+   SET playerWon to true
+   stop checking for next case
+  END IF
+  SET count to zero
+ END FOR
+END IF 
+// Check for same player on the diagonal running from the top-left corner to the bottom-right corner
+IF NOT playerWon
+ FOR each row on the board     
+                IF player EQUALS board element(row,row) THEN
+   INCREMENT count
+  END IF
+    // Check if player wins
+  IF count EQUALS 3 THEN
+   SET playerWon to true
+   stop checking for next case
+  END IF   END FOR
+ SET count to zero // Warning: reset count after for loop
+END IF 
+// Check for same player on the diagonal running from the top-right corner to the bottom-left corner
+IF NOT playerWon
+ INITIALIZE col to 2
+ FOR each row on the board     
+                IF player EQUALS board element(row,col) THEN
+   INCREMENT count
+  END IF
+    // Check if player wins
+  IF count EQUALS 3 THEN
+   SET playerWon to true
+   stop checking for next case
+  END IF
+  DECREMENT col
+ END FOR
+END IF 
+// Returns true if the player wins
+IF player won THEN
+ RETURN true
+ELSE
+ RETURN false
+END IF

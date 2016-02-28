@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE commands SYSTEM "commands.dtd">
+<commands>
+   <add>
+      <appointment>
+         <description>Tennis</description>
+	     <day>2002/8/24</day>
+	     <from>9:00</from>
+	     <to>10:30</to>
+      </appointment>
+   </add>
+   <remove>
+      <appointment>
+         <description>CS151</description>
+	     <day>2002/1/24</day>
+	     <from>12:30</from>
+	     <to>2:30</to>
+      </appointment>
+   </remove>
+   <remove>
+      <appointment>
+         <description>Movie</description>
+	     <day>2002/6/24</day>
+	     <from>20:30</from>
+	     <to>22:30</to>
+      </appointment>   
+   </remove>   
+</commands>

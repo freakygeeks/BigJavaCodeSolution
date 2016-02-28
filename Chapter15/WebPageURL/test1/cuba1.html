@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<!-- saved from url=(0124)http://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver -->
+<html itemscope="" itemtype="http://schema.org/QAPage"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>java - How to fetch all links and click those links one by one using selenium webdriver - Stack Overflow</title>
+    <link rel="shortcut icon" href="http://cdn.sstatic.net/stackoverflow/img/favicon.ico?v=6cd6089ee7f6">
+    <link rel="apple-touch-icon image_src" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png?v=41f6e13ade69">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="stackoverflow.com">
+    <meta property="og:type" content="website">
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=ea71a5211a91">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="How to fetch all links and click those links one by one using selenium webdriver">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="I using selenuim webdriver, lang: java
+I am fetching all links from webpage and trying to click each link one by one. I am getting below  error: 
+
+
+  error ">
+    <meta property="og:url" content="http://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver">
+    <link rel="canonical" href="./cuba1_files/cuba1.html">
+
+    
+    
+    <script type="text/javascript" async="" src="./cuba1_files/ados"></script><script async="" src="./cuba1_files/quant.js"></script><script async="" src="./cuba1_files/beacon.js"></script><script async="" src="./cuba1_files/analytics.js"></script><script type="text/javascript" async="" src="./cuba1_files/ados.js"></script><script src="./cuba1_files/jquery.min.js"></script>
+    <script src="./cuba1_files/stub.en.js"></script>
+    <link rel="stylesheet" type="text/css" href="./cuba1_files/all.css">
+    
+    <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;How to fetch all links and click those links one by one using selenium webdriver&#39;" href="http://stackoverflow.com/feeds/question/13448091">
+    <meta name="twitter:app:country" content="US">
+    <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+    <meta name="twitter:app:id:iphone" content="871299723">
+    <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver">
+    <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+    <meta name="twitter:app:id:ipad" content="871299723">
+    <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver">
+    <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+    <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver">
+    <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+    <script>
+        
+        StackExchange.ready(function () {
+                
+                StackExchange.using("snippets", function () {
+                    StackExchange.snippets.initSnippetRenderer();
+                });
+                
+
+            StackExchange.using("postValidation", function () {
+                StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+            });
+
+            
+            StackExchange.question.init({showAnswerHelp:true,totalCommentCount:0,shownCommentCount:0,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:13448091});
+
+            styleCode();
+
+                StackExchange.realtime.subscribeToQuestion('1', '13448091');
+                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+        });
+    </script>
+
+
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1427867318,"networkMetaHostname":"meta.stackexchange.com","routeName":"Questions/Show","styleCode":true,"enableUserHovercards":true,"snippets":{"enabled":true,"domain":"stacksnippets.net"},"site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"nonAsciiTags":true,"enableSocialMediaInSharePopup":true},"user":{"fkey":"b0755fb1c8f39a711cabed6b9dc3d8ea","isAnonymous":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"c384684c11d4","js/moderator.en.js":"696a78b55b28","js/full-anon.en.js":"0e605e6101e2","js/full.en.js":"d027d5535889","js/wmd.en.js":"28a2a93e360c","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"1a12cb33590d","js/help.en.js":"b5f40fd81205","js/tageditor.en.js":"a6af4d441c80","js/tageditornew.en.js":"b95e002f8df1","js/inline-tag-editing.en.js":"48f13b102998","js/revisions.en.js":"6c7265ea9fa1","js/review.en.js":"ffe3fd3a8c55","js/tagsuggestions.en.js":"b278f9a0b23b","js/post-validation.en.js":"f25019da602c","js/explore-qlist.en.js":"257ba4cb7b04","js/events.en.js":"a18ec8b14b1b","js/keyboard-shortcuts.en.js":"c5e1a273f8b6","js/external-editor.en.js":"333f2972598f","js/external-editor.en.js":"333f2972598f","js/snippet-javascript.en.js":"49fc6920793f","js/snippet-javascript-codemirror.en.js":"eebf0a5445d7"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+    
+    
+<script async="" src="./cuba1_files/full-anon.en.js"></script><script async="" src="./cuba1_files/snippet-javascript.en.js"></script><script async="" src="./cuba1_files/post-validation.en.js"></script><script async="" src="./cuba1_files/prettify-full.en.js"></script><script async="" src="./cuba1_files/external-editor.en.js"></script><script type="text/javascript" src="./cuba1_files/adFeedback.js"></script><link rel="stylesheet" href="http://static.adzerk.net/Extensions/adFeedback.css"><link type="text/css" rel="stylesheet" href="./cuba1_files/jobs.min.css"></head>
+<body class="question-page new-topbar">
+    <noscript>&lt;div id="noscript-padding"&gt;&lt;/div&gt;</noscript>
+    <div id="notify-container"></div>
+    <div id="overlay-header"></div>
+    <div id="custom-header"></div>
+
+
+
+
+<div class="topbar">
+    <div class="topbar-wrapper">
+
+        <div class="js-topbar-dialog-corral">
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="http://stackoverflow.com/">current community</a></h3>
+    </div>
+    <div class="modal-content current-site-container">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+                    <a href="http://blog.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:7 })">blog</a>
+            </div>
+
+
+
+
+    <a href="http://stackoverflow.com/" class="current-site-link site-link js-gps-track" data-id="1" data-gps-track="
+        site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    
+
+
+
+    <a href="http://meta.stackoverflow.com/" class="site-link js-gps-track" data-id="552" data-gps-track="
+            site.switch({ target_site:552, item_type:3 }),
+        site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                </li>
+                            <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    <a class="site-link js-gps-track" href="http://careers.stackoverflow.com/?utm_source=stackoverflow.com&utm_medium=site-ui&utm_campaign=multicollider" data-gps-track="site_switcher.click({ item_type:9 })">
+                        <div class="site-icon favicon favicon-careers" title="Stack Overflow Careers"></div>
+                        Stack Overflow Careers
+                    </a>
+                </li>
+        </ul>
+    </div>
+    
+    <div class="header" id="your-communities-header">
+        <h3>
+your communities        </h3>
+            
+    </div>
+    <div class="modal-content" id="your-communities-section">
+            
+            <div class="call-to-login">
+<a href="https://stackoverflow.com/users/signup?returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f13448091%2fhow-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or <a href="https://stackoverflow.com/users/login?returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f13448091%2fhow-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list.
+            </div>
+    </div>
+    
+    <div class="header">
+        <h3><a href="http://stackexchange.com/sites">more stack exchange communities</a></h3>
+    </div>
+    <div class="modal-content">
+            <div class="child-content"></div>
+    </div>
+</div>
+        </div>
+
+        <div class="network-items">
+
+            <a href="http://stackexchange.com/" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 140 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+
+        </div>
+
+        <div class="topbar-links">
+
+                <div class="links-container">
+                <span class="topbar-menu-links">
+                                <a href="https://stackoverflow.com/users/signup?returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f13448091%2fhow-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver" class="login-link">sign up</a>
+                                <a href="https://stackoverflow.com/users/login?returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f13448091%2fhow-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver" class="login-link">log in</a>
+
+                        <a href="http://stackoverflow.com/tour">tour</a>
+                            <a href="http://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="http://stackoverflow.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="http://stackoverflow.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="http://meta.stackoverflow.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                            <a href="http://careers.stackoverflow.com/?utm_source=stackoverflow.com&utm_medium=site-ui&utm_campaign=anon-topbar">stack overflow careers</a>
+                    </span>
+                </div>
+
+            <div class="search-container">
+                <form id="search" action="http://stackoverflow.com/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="" tabindex="1" autocomplete="off" maxlength="240">
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script>
+
+    <div class="container">
+        <div id="header">
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="http://stackoverflow.com/">
+                    Stack Overflow
+                </a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs">
+                    <ul>
+                        <li class="youarehere"><a id="nav-questions" href="http://stackoverflow.com/questions">Questions</a></li>
+                        <li><a id="nav-tags" href="http://stackoverflow.com/tags">Tags</a></li>
+                        <li><a id="nav-users" href="http://stackoverflow.com/users">Users</a></li>
+                        <li><a id="nav-badges" href="http://stackoverflow.com/help/badges">Badges</a></li>
+                        <li><a id="nav-unanswered" href="http://stackoverflow.com/unanswered">Unanswered</a></li>
+                    </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion" href="http://stackoverflow.com/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <div id="content" class="snippet-hidden">
+            
+
+<div itemscope="" itemtype="http://schema.org/Question">
+	<link itemprop="image" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png">
+			<!--googleoff: all-->
+
+<div id="herobox-mini">
+    <div id="hero-content">
+        <span id="controls">
+            <a href="http://stackoverflow.com/tour" id="tell-me-more" class="button">Take the 2-minute tour</a>
+            <span id="close"><a title="click to dismiss">×</a></span>
+        </span>
+        <div id="blurb">
+            Stack Overflow is a question and answer site for professional and enthusiast programmers. It's 100% free, no registration required.
+        </div>        
+    </div>
+    <script>
+        $('#tell-me-more').click(function () {
+            var clickSource = $("body").attr("class") + '-mini';
+            if ($("body").hasClass("questions-page")) {
+                clickSource = 'questionpagemini';
+            } else if ($("body").hasClass("question-page")) {
+                clickSource = 'questionpagemini';
+            } else if ($("body").hasClass("home-page")) {
+                clickSource = 'homepagemini';
+            }
+
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("aboutpage.click", { aboutclick_location: clickSource } , true);
+            });
+        });
+        $('#herobox-mini #close').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: "close" }, true);
+            });
+            $.cookie("hero", "none", { path: "/", expires: 365 });
+            var $hero = $("#herobox-mini");
+            $hero.slideUp('fast', function () { $hero.remove(); });
+            return false;
+        });
+    </script>
+</div>
+			<!--googleon: all-->
+			<script>
+				StackExchange.using("gps", function () {
+					StackExchange.gps.track("hero.show", { hero_type: "question-page-mini" }, true);
+				});
+			</script>
+			<div id="question-header">
+			<h1 itemprop="name"><a href="./cuba1_files/cuba1.html" class="question-hyperlink">How to fetch all links and click those links one by one using selenium webdriver</a></h1>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="13448091" id="question">
+
+    <script>
+                var ados = ados || {};ados.run = ados.run || [];
+                ados.run.push(function() { ados_add_placement(22,8277,"adzerk1090524642",4).setZone(43) ; });                    
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk1090524642"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NCwiYnQiOjAsImNtIjoxODY2MjQsImNoIjoxMTc4LCJjciI6NjYyODEzLCJkaSI6ImUzMmU4YTQwM2IyNzQ1MzU5MWNkNmZiNGQ1NGFkYTQzIiwiZG0iOjEsImZjIjo2ODQ1MzYsImZsIjo0MTAxODMsImlwIjoiMTIyLjEyOS4xMjAuMTYyIiwia3ciOiJqYXZhLHNlbGVuaXVtLXdlYmRyaXZlcix0ZXN0bmciLCJudyI6MjIsInBjIjowLCJwciI6MTU2OCwicnQiOjEsInJmIjoiaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS5teS8iLCJzdCI6ODI3NywidWsiOiJ1ZTEtYjY3ZDZlMjZlOTY3NDc4Njg5ZWE1YzRlMzcwYzJhNDQiLCJ6biI6NDMsInRzIjoxNDI3ODY3MzIwMjE3LCJiZiI6dHJ1ZSwicG4iOiJhZHplcmsxMDkwNTI0NjQyIiwidXIiOiJodHRwOi8vY2FyZWVycy5zdGFja292ZXJmbG93LmNvbS9jdi9nZXQtb25lP3V0bV9zb3VyY2U9c3RhY2tvdmVyZmxvdy5jb20mdXRtX21lZGl1bT1hZCZ1dG1fY2FtcGFpZ249Y2FuZGlkYXRlcy1hZGQtY3YmdXRtX2NvbnRlbnQ9bGItY2FyZWVycy1naXRwdXNoIn0&s=vvOB36b8scog4ekP6xthE0As9WQ" rel="nofollow" target="_blank" title=""><img src="./cuba1_files/8bb266973e664d288a7f217d15d31d41.png" title="" alt="" border="0" width="728" height="90"></a><div class="adzerk-vote-controls" style="display: none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./cuba1_files/i.gif"></div>    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="13448091">
+    <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+    <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+    <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+    
+    <a class="star-off" href="http://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver#" title="This is a favorite question (click again to undo)">favorite</a>
+    <div class="favoritecount"><b>1</b></div>   
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+        <p>I using selenuim webdriver, lang: java
+I am fetching all links from webpage and trying to click each link one by one. I am getting below  error: </p>
+
+<blockquote>
+  <p>error org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
+  Command duration or timeout: 30.01 seconds
+  For documentation on this error, please visit: <a href="http://seleniumhq.org/exceptions/stale_element_reference.html" rel="nofollow">http://seleniumhq.org/exceptions/stale_element_reference.html</a>
+  Build info: version: '2.25.0', revision: '17482', time: '2012-07-18 21:09:54'</p>
+</blockquote>
+
+<p>and here is my code : </p>
+
+<pre class="lang-java prettyprint prettyprinted"><code><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> getLinks</span><span class="pun">()</span><span class="kwd">throws</span><span class="pln"> </span><span class="typ">Exception</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">try</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">WebElement</span><span class="pun">&gt;</span><span class="pln"> links </span><span class="pun">=</span><span class="pln"> driver</span><span class="pun">.</span><span class="pln">findElements</span><span class="pun">(</span><span class="typ">By</span><span class="pun">.</span><span class="pln">tagName</span><span class="pun">(</span><span class="str">"a"</span><span class="pun">));</span><span class="pln">
+        </span><span class="kwd">int</span><span class="pln"> linkcount </span><span class="pun">=</span><span class="pln"> links</span><span class="pun">.</span><span class="pln">size</span><span class="pun">();</span><span class="pln"> 
+         </span><span class="typ">System</span><span class="pun">.</span><span class="pln">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">links</span><span class="pun">.</span><span class="pln">size</span><span class="pun">());</span><span class="pln"> 
+          </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="typ">WebElement</span><span class="pln"> myElement </span><span class="pun">:</span><span class="pln"> links</span><span class="pun">){</span><span class="pln">
+         </span><span class="typ">String</span><span class="pln"> link </span><span class="pun">=</span><span class="pln"> myElement</span><span class="pun">.</span><span class="pln">getText</span><span class="pun">();</span><span class="pln"> 
+         </span><span class="typ">System</span><span class="pun">.</span><span class="pln">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">link</span><span class="pun">);</span><span class="pln">
+         </span><span class="typ">System</span><span class="pun">.</span><span class="pln">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">myElement</span><span class="pun">);</span><span class="pln">   
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">link </span><span class="pun">!=</span><span class="str">""</span><span class="pun">){</span><span class="pln">
+             myElement</span><span class="pun">.</span><span class="pln">click</span><span class="pun">();</span><span class="pln">
+             </span><span class="typ">Thread</span><span class="pun">.</span><span class="pln">sleep</span><span class="pun">(</span><span class="lit">2000</span><span class="pun">);</span><span class="pln">
+             </span><span class="typ">System</span><span class="pun">.</span><span class="pln">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"third"</span><span class="pun">);</span><span class="pln">
+            </span><span class="pun">}</span><span class="pln">
+            </span><span class="com">//Thread.sleep(5000);</span><span class="pln">
+          </span><span class="pun">}</span><span class="pln"> 
+        </span><span class="pun">}</span><span class="kwd">catch</span><span class="pln"> </span><span class="pun">(</span><span class="typ">Exception</span><span class="pln"> e</span><span class="pun">){</span><span class="pln">
+            </span><span class="typ">System</span><span class="pun">.</span><span class="pln">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"error "</span><span class="pun">+</span><span class="pln">e</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span></code></pre>
+
+<p>actually,  it's displaying in output </p>
+
+<blockquote>
+  <p>[[FirefoxDriver: firefox on XP (ce0da229-f77b-4fb8-b017-df517845fa78)] -&gt; tag name: a] </p>
+</blockquote>
+
+<p>as link, I want to eliminate these form result.</p>
+
+    </div>
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/java" class="post-tag js-gps-track" title="show questions tagged &#39;java&#39;" rel="tag">java</a> <a href="http://stackoverflow.com/questions/tagged/selenium-webdriver" class="post-tag js-gps-track" title="show questions tagged &#39;selenium-webdriver&#39;" rel="tag">selenium-webdriver</a> <a href="http://stackoverflow.com/questions/tagged/testng" class="post-tag js-gps-track" title="show questions tagged &#39;testng&#39;" rel="tag">testng</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/q/13448091" title="short permalink to this question" class="short-link" id="link-post-13448091">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/13448091/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/13448091/revisions" title="show all edits to this post">edited <span title="2012-11-22 06:22:40Z" class="relativetime">Nov 22 '12 at 6:22</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/249690/bobrovsky"><div class="gravatar-wrapper-32"><img src="./cuba1_files/d94fb255ac968cb1d25701d77c541699" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/249690/bobrovsky">Bobrovsky</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">6,182</span><span title="11 gold badges"><span class="badge1"></span><span class="badgecount">11</span></span><span title="36 silver badges"><span class="badge2"></span><span class="badgecount">36</span></span><span title="90 bronze badges"><span class="badge3"></span><span class="badgecount">90</span></span>
+    </div>
+</div>    </td>
+    <td class="post-signature owner">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2012-11-19 05:20:08Z" class="relativetime">Nov 19 '12 at 5:20</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1829240/shammi"><div class="gravatar-wrapper-32"><img src="./cuba1_files/1af3c17f9e7cb43e79c0d481061d1f77" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1829240/shammi">Shammi</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">38</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+                
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-13448091" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-13448091" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post, or add one of your own" href="http://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver#" onclick=""></a>
+        </div>         
+    </td>
+</tr>        </tbody></table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								3 Answers
+                                <span style="display:none;" itemprop="answerCount">3</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="http://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver?answertab=active#tab-top" title="Answers with the latest activity first">active</a>
+        <a href="http://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver?answertab=oldest#tab-top" title="Answers in the order they were provided">oldest</a>
+        <a class="youarehere" href="http://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver?answertab=votes#tab-top" title="Answers with the highest score first">votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="13453351"></a>
+<div id="answer-13453351" class="answer accepted-answer" data-answerid="13453351" itemscope="" itemtype="http://schema.org/Answer" itemprop="acceptedAnswer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="13453351">
+    <a class="vote-up-off" title="This answer is useful">up vote</a>
+    <span itemprop="upvoteCount" class="vote-count-post ">3</span>
+    <a class="vote-down-off" title="This answer is not useful">down vote</a>
+    
+
+
+        <span class="vote-accepted-on load-accepted-answer-date" title="loading when this answer was accepted...">accepted</span>
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>There is no such a good idea to have following scenario : </p>
+
+<pre class="lang-java prettyprint prettyprinted"><code><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="typ">WebElement</span><span class="pln"> element </span><span class="pun">:</span><span class="pln"> webDriver</span><span class="pun">.</span><span class="pln">findElements</span><span class="pun">(</span><span class="pln">locator</span><span class="pun">.</span><span class="pln">getBy</span><span class="pun">())){</span><span class="pln">
+  element</span><span class="pun">.</span><span class="pln">click</span><span class="pun">();</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p>Why? Because there is no guarantee that the <code>element.click();</code> will have no effect on other found elements, so the <code>DOM</code> may be changed, so hence the <code>StaleElementReferenceException</code>.</p>
+
+<p>It is better to use the following scenario : </p>
+
+<pre class="lang-java prettyprint prettyprinted"><code><span class="kwd">int</span><span class="pln"> numberOfElementsFound </span><span class="pun">=</span><span class="pln"> getNumberOfElementsFound</span><span class="pun">(</span><span class="pln">locator</span><span class="pun">);</span><span class="pln">
+</span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> pos </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> pos </span><span class="pun">&lt;</span><span class="pln"> numberOfElementsFound</span><span class="pun">;</span><span class="pln"> pos</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  getElementWithIndex</span><span class="pun">(</span><span class="pln">locator</span><span class="pun">,</span><span class="pln"> pos</span><span class="pun">).</span><span class="pln">click</span><span class="pun">();</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p>This is better because you will always take the <code>WebElement</code> refreshed, even the previous click had some effects on it. </p>
+
+<p>EDIT : Example added </p>
+
+<pre class="lang-java prettyprint prettyprinted"><code><span class="pln">  </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> getNumberOfElementsFound</span><span class="pun">(</span><span class="typ">By</span><span class="pln"> by</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> webDriver</span><span class="pun">.</span><span class="pln">findElements</span><span class="pun">(</span><span class="pln">by</span><span class="pun">).</span><span class="pln">size</span><span class="pun">();</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+
+  </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">WebElement</span><span class="pln"> getElementWithIndex</span><span class="pun">(</span><span class="typ">By</span><span class="pln"> by</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> pos</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> webDriver</span><span class="pun">.</span><span class="pln">findElements</span><span class="pun">(</span><span class="pln">by</span><span class="pun">).</span><span class="pln">get</span><span class="pun">(</span><span class="pln">pos</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">}</span></code></pre>
+
+<p>Hope to be enough.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/13453351" title="short permalink to this answer" class="short-link" id="link-post-13453351">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/13453351/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/13453351/revisions" title="show all edits to this post">edited <span title="2012-11-20 08:35:18Z" class="relativetime">Nov 20 '12 at 8:35</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        <br>
+        
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2012-11-19 11:59:27Z" class="relativetime">Nov 19 '12 at 11:59</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1392463/ioan"><div class="gravatar-wrapper-32"><img src="./cuba1_files/f73a452c652143db60ef5ccb8e768b65" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1392463/ioan">Ioan</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">2,313</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="10 silver badges"><span class="badge2"></span><span class="badgecount">10</span></span><span title="24 bronze badges"><span class="badge3"></span><span class="badgecount">24</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-13453351" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="1" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-18421746" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">can pls give me one sample example of above scenario. It will really appreciable. thanks.</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/1829240/shammi" title="38 reputation" class="comment-user owner">Shammi</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver#comment18421746_13453351"><span title="2012-11-20 05:47:58Z" class="relativetime-clean">Nov 20 '12 at 5:47</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-18433463" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I have updated my answer.</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/1392463/ioan" title="2313 reputation" class="comment-user">Ioan</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver#comment18433463_13453351"><span title="2012-11-20 13:45:57Z" class="relativetime-clean">Nov 20 '12 at 13:45</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-18579192" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@loan I am still struggling, didn't get through. May be because I'm new to selenium driver. loop is running 4 times after that it sending following error  &lt;blockquote&gt;'error org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with Command duration or timeout: 30.05 seconds Build info: version: '2.25.0', revision: '17482', time: '2012-07-18 21:09:54' System info: os.name: 'Windows 7', os.arch: 'x86', os.version: '6 &gt;</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/1829240/shammi" title="38 reputation" class="comment-user owner">Shammi</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver#comment18579192_13453351"><span title="2012-11-26 09:07:02Z" class="relativetime-clean">Nov 26 '12 at 9:07</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-18580117" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Well this is a different problem than StaleElementReferenceException. It means that you are trying to access an element which is not visibile, and most probably which is made visibile by another element. So first you have to identify which is this element, and then to make sure that it is visibile before to perform any actions on it. Or if is not mandatory, you can use .isDisplayed() method, to check if this element is proper, and then continue.</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/1392463/ioan" title="2313 reputation" class="comment-user">Ioan</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver#comment18580117_13453351"><span title="2012-11-26 09:44:21Z" class="relativetime-clean">Nov 26 '12 at 9:44</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-18585660" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@loan Thanks alot now it's working fine  :)</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/1829240/shammi" title="38 reputation" class="comment-user owner">Shammi</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver#comment18585660_13453351"><span title="2012-11-26 13:08:19Z" class="relativetime-clean">Nov 26 '12 at 13:08</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-13453351" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link " title="expand to show all comments on this post, or add one of your own" href="http://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver#" onclick="">show <b>1</b> more comment</a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+<script>
+                var ados = ados || {};ados.run = ados.run || [];
+                ados.run.push(function() { ados_add_placement(22,8277,"adzerk1876754883",4).setZone(44) ; });                    
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk1876754883"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NCwiYnQiOjAsImNtIjoxODY2MjQsImNoIjoxMTc4LCJjciI6Njg0Mjk3LCJkaSI6ImEzODRmZTdmMGE5OTRlMDlhYmY0Y2ZkNmRjNTBhYWM3IiwiZG0iOjEsImZjIjo3MDg0NTEsImZsIjo0MzE3ODAsImlwIjoiMTIyLjEyOS4xMjAuMTYyIiwia3ciOiJqYXZhLHNlbGVuaXVtLXdlYmRyaXZlcix0ZXN0bmciLCJudyI6MjIsInBjIjowLCJwciI6MTYwNCwicnQiOjEsInJmIjoiaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS5teS8iLCJzdCI6ODI3NywidWsiOiJ1ZTEtYjY3ZDZlMjZlOTY3NDc4Njg5ZWE1YzRlMzcwYzJhNDQiLCJ6biI6NDQsInRzIjoxNDI3ODY3MzIwMjIwLCJiZiI6dHJ1ZSwicG4iOiJhZHplcmsxODc2NzU0ODgzIiwidXIiOiJodHRwOi8vY2FyZWVycy5zdGFja292ZXJmbG93LmNvbS9wcm9kdWN0cz91dG1fc291cmNlPXN0YWNrb3ZlcmZsb3cuY29tJnV0bV9tZWRpdW09YWQmdXRtX2NhbXBhaWduPWVtcGxveWVycy1iZXN0LXdheSZ1dG1fY29udGVudD1tbGItYmVzdC13YXkifQ&s=4LgSq0DwJBsX0Ljd4FFjsz-RCI0" rel="nofollow" target="_blank" title=""><img src="./cuba1_files/6a84d696ad6c4679804e4923a617ade4.png" title="" alt="" border="0" width="728" height="90"></a><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./cuba1_files/i(1).gif"></div>
+  
+<a name="13449860"></a>
+<div id="answer-13449860" class="answer" data-answerid="13449860" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="13449860">
+    <a class="vote-up-off" title="This answer is useful">up vote</a>
+    <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+    <a class="vote-down-off" title="This answer is not useful">down vote</a>
+    
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<pre class="lang-java prettyprint prettyprinted"><code><span class="pln">    </span><span class="typ">WebDriver</span><span class="pln"> _driver </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">InternetExplorerDriver</span><span class="pun">();</span><span class="pln">
+    _driver</span><span class="pun">.</span><span class="pln">navigate</span><span class="pun">().</span><span class="pln">to</span><span class="pun">(</span><span class="str">"http://www.google.co.in/"</span><span class="pun">);</span><span class="pln">
+    </span><span class="typ">List</span><span class="pln"> </span><span class="pun">&lt;</span><span class="typ">WebElement</span><span class="pun">&gt;</span><span class="pln"> alllinks </span><span class="pun">=</span><span class="pln"> _driver</span><span class="pun">.</span><span class="pln">findElements</span><span class="pun">(</span><span class="typ">By</span><span class="pun">.</span><span class="pln">tagName</span><span class="pun">(</span><span class="str">"a"</span><span class="pun">));</span><span class="pln">
+
+    </span><span class="kwd">for</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln">i</span><span class="pun">&lt;</span><span class="pln">alllinks</span><span class="pun">.</span><span class="pln">size</span><span class="pun">();</span><span class="pln">i</span><span class="pun">++)</span><span class="pln">
+        </span><span class="typ">System</span><span class="pun">.</span><span class="pln">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">alllinks</span><span class="pun">.</span><span class="pln">get</span><span class="pun">(</span><span class="pln">i</span><span class="pun">).</span><span class="pln">getText</span><span class="pun">());</span><span class="pln">
+
+    </span><span class="kwd">for</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln">i</span><span class="pun">&lt;</span><span class="pln">alllinks</span><span class="pun">.</span><span class="pln">size</span><span class="pun">();</span><span class="pln">i</span><span class="pun">++){</span><span class="pln">
+        alllinks</span><span class="pun">.</span><span class="pln">get</span><span class="pun">(</span><span class="pln">i</span><span class="pun">).</span><span class="pln">click</span><span class="pun">();</span><span class="pln">
+        _driver</span><span class="pun">.</span><span class="pln">navigate</span><span class="pun">().</span><span class="pln">back</span><span class="pun">();</span><span class="pln">
+    </span><span class="pun">}</span></code></pre>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/13449860" title="short permalink to this answer" class="short-link" id="link-post-13449860">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/13449860/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2012-11-19 08:12:34Z" class="relativetime">Nov 19 '12 at 8:12</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1729689/anand-somani"><div class="gravatar-wrapper-32"><img src="./cuba1_files/b420ba3e312a4571f7ab8bbadb14e6e8" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1729689/anand-somani">Anand Somani</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">191</span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-13449860" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-18391547" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I don't think that will work, having navigated away won't you get a stale object exception? I think you have to look up all the links each time, take an object and ignore the rest.</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/226606/edc" title="1377 reputation" class="comment-user">EdC</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver#comment18391547_13449860"><span title="2012-11-19 08:15:08Z" class="relativetime-clean">Nov 19 '12 at 8:15</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-18392332" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">NO it's not working, still getting same error above error :(</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/1829240/shammi" title="38 reputation" class="comment-user owner">Shammi</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver#comment18392332_13449860"><span title="2012-11-19 08:56:50Z" class="relativetime-clean">Nov 19 '12 at 8:56</span></a></span>
+                    <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-13449860" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post, or add one of your own" href="http://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="22842584"></a>
+<div id="answer-22842584" class="answer" data-answerid="22842584" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="22842584">
+    <a class="vote-up-off" title="This answer is useful">up vote</a>
+    <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+    <a class="vote-down-off" title="This answer is not useful">down vote</a>
+    
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>If you're OK using <code>WebDriver.get()</code> instead of <code>WebElement.click()</code> to test the links, an alternate approach is to save the <code>href</code> value of each found <code>WebElement</code> in a separate list. This way you avoid the <code>StaleElementReferenceException</code> because you're not trying to reuse subsequent <code>WebElement</code>s after navigating away with the first <code>WebElement.click()</code>.</p>
+
+<p>Basic example:</p>
+
+<pre class="lang-java prettyprint prettyprinted"><code><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;</span><span class="pln"> hrefs </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">ArrayList</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;();</span><span class="pln">
+</span><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">WebElement</span><span class="pun">&gt;</span><span class="pln"> anchors </span><span class="pun">=</span><span class="pln"> driver</span><span class="pun">.</span><span class="pln">findElements</span><span class="pun">(</span><span class="typ">By</span><span class="pun">.</span><span class="pln">tagName</span><span class="pun">(</span><span class="str">"a"</span><span class="pun">));</span><span class="pln">
+</span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> </span><span class="typ">WebElement</span><span class="pln"> anchor </span><span class="pun">:</span><span class="pln"> anchors </span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    hrefs</span><span class="pun">.</span><span class="pln">add</span><span class="pun">(</span><span class="pln">anchor</span><span class="pun">.</span><span class="pln">getAttribute</span><span class="pun">(</span><span class="str">"href"</span><span class="pun">));</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> href </span><span class="pun">:</span><span class="pln"> hrefs </span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    driver</span><span class="pun">.</span><span class="pln">get</span><span class="pun">(</span><span class="pln">href</span><span class="pun">);</span><span class="pln">           
+</span><span class="pun">}</span></code></pre>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/22842584" title="short permalink to this answer" class="short-link" id="link-post-22842584">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/22842584/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2014-04-03 15:42:11Z" class="relativetime">Apr 3 '14 at 15:42</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/3494184/ubqtous"><div class="gravatar-wrapper-32"><img src="./cuba1_files/Wj1fS.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/3494184/ubqtous">Ubqtous</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-22842584" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-22842584" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post, or add one of your own" href="http://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+									<a name="new-answer"></a>
+						<form id="post-form" action="http://stackoverflow.com/questions/13448091/answer/submit" method="post" class="post-form">
+						    <input type="hidden" id="post-id" value="13448091">
+                            <input type="hidden" id="qualityBanWarningShown" name="qualityBanWarningShown" value="false">
+                            <input type="hidden" name="referrer" value="https://www.google.com.my/">
+							<h2 class="space">Your Answer</h2>
+
+
+
+            <script>
+            StackExchange.ifUsing("editor", function () {
+                StackExchange.using("externalEditor", function () {
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.init();
+                    });
+                });
+            }, "code-snippets");
+        </script>
+    
+
+<script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+       
+        StackExchange.using("externalEditor", function() {
+            // Have to fire editor after snippets, if snippets enabled
+            if (StackExchange.options.snippets.enabled) {
+                StackExchange.using("snippets", function() {
+                    createEditor();
+                });
+            }
+            else {
+                createEditor();
+            }
+        });
+
+        function createEditor() {
+            prepareEditor({
+                heartbeatType: 'answer',
+                bindNavPrevention: true,
+                postfix: "",
+                    onDemand: true,
+                    discardSelector: ".discard-answer"
+                ,immediatelyShowMarkdownHelp:true
+                });
+                
+
+        }
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor">
+
+    <div style="position: relative;">     
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"><ul id="wmd-button-row" class="wmd-button-row"><li id="wmd-bold-button" class="wmd-button" style="left: 0px;"><span style="background-position: 0px -20px;"></span></li><li id="wmd-italic-button" class="wmd-button" style="left: 25px;"><span style="background-position: -20px -20px;"></span></li><li id="wmd-spacer1" class="wmd-spacer" style="left: 50px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-link-button" class="wmd-button" style="left: 75px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-quote-button" class="wmd-button" style="left: 100px;"><span style="background-position: -60px -20px;"></span></li><li id="wmd-code-button" class="wmd-button" style="left: 125px;"><span style="background-position: -80px -20px;"></span></li><li id="wmd-image-button" class="wmd-button" style="left: 150px;"><span style="background-position: -100px -20px;"></span></li><li id="wmd-spacer2" class="wmd-spacer" style="left: 175px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-olist-button" class="wmd-button" style="left: 200px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-ulist-button" class="wmd-button" style="left: 225px;"><span style="background-position: -140px -20px;"></span></li><li id="wmd-heading-button" class="wmd-button" style="left: 250px;"><span style="background-position: -160px -20px;"></span></li><li id="wmd-hr-button" class="wmd-button" style="left: 275px;"><span style="background-position: -180px -20px;"></span></li><li id="wmd-spacer3" class="wmd-spacer" style="left: 300px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-undo-button" class="wmd-button" style="left: 325px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-redo-button" class="wmd-button" style="left: 350px;"><span style="background-position: -220px -20px;"></span></li></ul></div>
+            <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        </div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="b0755fb1c8f39a711cabed6b9dc3d8ea">
+        <input id="author" name="author" type="text">
+    </div>
+
+
+
+</div>
+							<div style="position: relative;">
+								
+            <div class="form-item new-post-login">
+        
+                <div class="new-login-form">
+                    <div class="new-login-left">
+                        <h3>Sign up or <a id="login-link" href="http://stackoverflow.com/users/login?returnurl=%2fquestions%2f13448091%2fhow-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver%23new-answer">log in</a></h3>
+                        <script>
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                            });
+                        </script>
+                        <div class="preferred-login google-login">
+                            <p><span class="icon"></span><span>Sign up using Google</span></p>
+                        </div>
+                        <div class="preferred-login facebook-login">
+                            <p><span class="icon"></span><span>Sign up using Facebook</span></p>
+                        </div>
+                        <div class="preferred-login stackexchange-login">
+                            <p><span class="icon"></span><span>Sign up using Stack Exchange</span></p>
+                        </div>
+                    </div>
+                    <input type="hidden" name="manual-openid" class="manual-openid">
+                    <input type="hidden" name="use-facebook" class="use-facebook" value="false">
+                    <input type="hidden" name="use-google" class="use-google" value="false">
+                    <input type="button" class="submit-openid" value="Submit" style="display:none">
+                    <div class="new-login-right">
+                                <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tbody><tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown">
+                </div>
+            </td>
+        </tr>
+        </tbody></table>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', '%2fquestions%2f13448091%2fhow-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver%23new-answer');
+                    }
+                );
+            </script>
+            <noscript>
+                        &lt;h3&gt;Post as a guest&lt;/h3&gt;
+    &lt;div class="form-item"&gt;
+        &lt;table&gt;
+        &lt;tr&gt;
+                    &lt;td class="vm"&gt;
+                &lt;div&gt;
+                    &lt;label for="display-name"&gt;Name&lt;/label&gt;
+                    &lt;input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105"&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label for="m-address"&gt;Email&lt;/label&gt;
+                    &lt;input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown" /&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+
+            </noscript>
+							</div>
+           
+															<div class="form-submit cbt">
+									<input id="submit-button" type="submit" value="Post Your Answer" tabindex="110">
+									<a href="http://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver#" class="discard-answer dno">discard</a>
+
+<p class="privacy-policy-agreement">
+By posting your answer, you agree to the <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.</p>
+<input type="hidden" name="legalLinksShown" value="1">								</div>
+						</form>
+
+
+
+						<h2 class="bottom-notice" data-loc="1">
+Not the answer you're looking for?							Browse other questions tagged <a href="http://stackoverflow.com/questions/tagged/java" class="post-tag" title="show questions tagged &#39;java&#39;" rel="tag">java</a> <a href="http://stackoverflow.com/questions/tagged/selenium-webdriver" class="post-tag" title="show questions tagged &#39;selenium-webdriver&#39;" rel="tag">selenium-webdriver</a> <a href="http://stackoverflow.com/questions/tagged/testng" class="post-tag" title="show questions tagged &#39;testng&#39;" rel="tag">testng</a>  or <a href="http://stackoverflow.com/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tbody><tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2012-11-19 05:20:08Z"><b>2 years ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>12712 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="http://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver?lastactivity" class="lastactivity-link" title="2014-04-03 15:42:11Z">12 months ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </tbody></table>
+			    </div>
+						
+			<script>
+                var ados = ados || {};ados.run = ados.run || [];
+                ados.run.push(function() { ados_add_placement(22,8277,"adzerk1803203750",[17,2221]).setZone(45) ; });                    
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk1803203750"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6MTcsImJ0IjowLCJjbSI6MTg2NjI0LCJjaCI6MTE3OCwiY3IiOjY4NDI3OCwiZGkiOiJiZjZjZDEzZWJiODE0MjA3OTAyMGY1ZDMxMzk1NWYwNiIsImRtIjoxLCJmYyI6NzA4NDMyLCJmbCI6NDMxNzgwLCJpcCI6IjEyMi4xMjkuMTIwLjE2MiIsImt3IjoiamF2YSxzZWxlbml1bS13ZWJkcml2ZXIsdGVzdG5nIiwibnciOjIyLCJwYyI6MCwicHIiOjE2MDQsInJ0IjoxLCJyZiI6Imh0dHBzOi8vd3d3Lmdvb2dsZS5jb20ubXkvIiwic3QiOjgyNzcsInVrIjoidWUxLWI2N2Q2ZTI2ZTk2NzQ3ODY4OWVhNWM0ZTM3MGMyYTQ0Iiwiem4iOjQ1LCJ0cyI6MTQyNzg2NzMyMDIyMiwiYmYiOnRydWUsInBuIjoiYWR6ZXJrMTgwMzIwMzc1MCIsInVyIjoiaHR0cDovL2NhcmVlcnMuc3RhY2tvdmVyZmxvdy5jb20vam9icy9yZW1vdGU_dXRtX3NvdXJjZT1zdGFja292ZXJmbG93LmNvbSZ1dG1fbWVkaXVtPWFkJnV0bV9jYW1wYWlnbj1jYW5kaWRhdGVzLXdmaCZ1dG1fY29udGVudD1zYi13ZmgtY2F0In0&s=iID-zIFzA_6GgxoBY-jTvMYK4D4" rel="nofollow" target="_blank" title=""><img src="./cuba1_files/c050fce5e0094decb57fdb53f4ca4254.jpg" title="" alt="" border="0" width="220" height="250"></a><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/13448091/how-to-fetch-all-links-and-click-those-links-one-by-one-using-selenium-webdriver#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./cuba1_files/i(2).gif"></div>  
+        <div id="hireme" class="tag-themed java tagged"><a href="http://careers.stackoverflow.com/jobs/tag/java?a=6T2X6" target="_blank" data-la="6T2X6" data-hf="h" class="top"> <span>Want a <span class="header-tag">java</span> job?</span></a><ul class="jobs"><li><a data-cid="170360" data-la="scRTY3s0mw9" href="http://careers.stackoverflow.com/jobs/84109/software-development-engineer-amazon" target="_blank" title="Software Development Engineer at Amazon. Click to learn more.">Software Development Engineer<br><div class="company">Amazon</div><div class="location" title="Newark, NJ / relocation">Newark, NJ / relocation</div><span class="post-tag highlight">java</span><span class="post-tag">web</span></a></li><li><a data-cid="168544" data-la="rA0sSbowlp0" href="http://careers.stackoverflow.com/jobs/82240/software-engineer-java-trek-bikes" target="_blank" title="Software Engineer - Java at Trek Bikes. Click to learn more.">Software Engineer - Java<br><div class="company">Trek Bikes</div><div class="location" title="Waterloo, WI / remote / relocation">Waterloo, WI / remote / relocation</div><span class="post-tag highlight">java</span><span class="post-tag">spring</span></a></li></ul><img class="impression" src="./cuba1_files/i" style="display:none;"><img class="impression" src="./cuba1_files/scRTY3s0mw9-rA0sSbowlp0-6T2X6" style="display:none;"></div>
+			<div class="module" id="chat-feature">
+    
+
+    
+<h4><a href="http://chat.stackoverflow.com/" id="h-chat-link" title="32 users active in 23 rooms the last 60 minutes">32 People Chatting</a></h4>
+
+<div class="related" id="ad502-rooms"><div class="ad502-room"><h3 class="ad502-room-h3"><span class="ad502-room-title" title="Lounge&lt;C++&gt;"><a href="http://chat.stackoverflow.com/rooms/10">Lounge&lt;C++&gt;</a></span></h3><span title="2015-04-01 01:16:40Z" class="ad502-last-message">4 hours ago - <a href="http://chat.stackoverflow.com/users/3886129">Nooble</a></span><br><div class="ad502-users"><a href="http://chat.stackoverflow.com/users/3886129"><img height="23" width="23" title="Nooble: 4 hours ago" src="./cuba1_files/x7gOr.jpg"></a><a href="http://chat.stackoverflow.com/users/46642"><img height="23" width="23" title="R. Martinho Fernandes: 4 hours ago" src="./cuba1_files/f64914b68ff9076e46156c07c96e890f"></a><a href="http://chat.stackoverflow.com/users/3547110"><img height="23" width="23" title="Blob: 4 hours ago" src="./cuba1_files/50243980b4476b06d528030460e8933a"></a><a href="http://chat.stackoverflow.com/users/2369847"><img height="23" width="23" title="chmod 711 telkitty: 5 hours ago" src="./cuba1_files/tWqub.png"></a><a href="http://chat.stackoverflow.com/users/922184"><img height="23" width="23" title="Mysticial: 5 hours ago" src="./cuba1_files/URZNf.jpg"></a><a href="http://chat.stackoverflow.com/users/1381108"><img height="23" width="23" title="Rapptz: 5 hours ago" src="./cuba1_files/0a55e1b257487441cd435f66bfb413f1"></a><a href="http://chat.stackoverflow.com/users/1413395"><img height="23" width="23" title="πάντα ῥεῖ: 6 hours ago" src="./cuba1_files/6wNQa.jpg"></a></div></div><div class="ad502-room"><h3 class="ad502-room-h3"><span class="ad502-room-title" title="JavaScript"><a href="http://chat.stackoverflow.com/rooms/17">JavaScript</a></span></h3><span title="2015-04-01 01:16:36Z" class="ad502-last-message">4 hours ago - <a href="http://chat.stackoverflow.com/users/1048572">Bergi</a></span><br><div class="ad502-users"><a href="http://chat.stackoverflow.com/users/1048572"><img height="23" width="23" title="Bergi: 4 hours ago" src="./cuba1_files/7f2c4de95e8f4f8f5a71c3aaf0ed312a"></a><a href="http://chat.stackoverflow.com/users/2401804"><img height="23" width="23" title="r3wt: 4 hours ago" src="./cuba1_files/m0kXS.jpg"></a><a href="http://chat.stackoverflow.com/users/1216976"><img height="23" width="23" title="SomeKittens: 4 hours ago" src="./cuba1_files/8f10852a80ca4794f50a304254cb123b"></a><a href="http://chat.stackoverflow.com/users/2854647"><img height="23" width="23" title="Maki: 4 hours ago" src="./cuba1_files/198e1025a309115c12c98888f46f5e88"></a><a href="http://chat.stackoverflow.com/users/1079641"><img height="23" width="23" title="DemCodeLines: 4 hours ago" src="./cuba1_files/P7SUG.jpg"></a><a href="http://chat.stackoverflow.com/users/1386166"><img height="23" width="23" title="phenomnomnominal: 4 hours ago" src="./cuba1_files/7ea079654bb159fdaa4043834688f57d"></a><a href="http://chat.stackoverflow.com/users/1514572"><img height="23" width="23" title="monners: 5 hours ago" src="./cuba1_files/8e44332313cc7335e98748739977ea5d"></a></div></div></div>
+<script>
+// <!--
+    StackExchange.ready(
+    function () {
+        var options = {
+            chatUrl: 'http://chat.stackoverflow.com',
+            reloadUrl: '/api/recent-chat',
+            preloadData: {"activeUsers":32,"activeRooms":23,"rooms":[{"name":"Lounge\u003cC++\u003e","id":10,"lastPost":1427851000,"posts":3551253,"users":[{"name":"Nooble","id":3886129,"emailhash":"!http://i.stack.imgur.com/x7gOr.jpg?s=128\u0026g=1","lastPost":1427851001},{"name":"R. Martinho Fernandes","id":46642,"emailhash":"f64914b68ff9076e46156c07c96e890f","lastPost":1427850877},{"name":"Blob","id":3547110,"emailhash":"50243980b4476b06d528030460e8933a","lastPost":1427850868},{"name":"chmod 711 telkitty","id":2369847,"emailhash":"!http://i.stack.imgur.com/tWqub.png?s=128\u0026g=1","lastPost":1427848130},{"name":"Mysticial","id":922184,"emailhash":"!http://i.stack.imgur.com/URZNf.jpg?s=128\u0026g=1","lastPost":1427848008},{"name":"Rapptz","id":1381108,"emailhash":"0a55e1b257487441cd435f66bfb413f1","lastPost":1427846678},{"name":"πάντα ῥεῖ","id":1413395,"emailhash":"!http://i.stack.imgur.com/6wNQa.jpg?s=128\u0026g=1","lastPost":1427844691}],"messages":[{"date":1427851000,"user":"Nooble","userid":3886129}],"singleImage":false,"tags":["c++","c++11","c++14","c++-faq"]},{"name":"JavaScript","id":17,"lastPost":1427850996,"posts":2506840,"users":[{"name":"Bergi","id":1048572,"emailhash":"7f2c4de95e8f4f8f5a71c3aaf0ed312a","lastPost":1427850996},{"name":"r3wt","id":2401804,"emailhash":"!http://i.stack.imgur.com/m0kXS.jpg?s=128\u0026g=1","lastPost":1427850680},{"name":"SomeKittens","id":1216976,"emailhash":"8f10852a80ca4794f50a304254cb123b","lastPost":1427850542},{"name":"Maki","id":2854647,"emailhash":"198e1025a309115c12c98888f46f5e88","lastPost":1427850119},{"name":"DemCodeLines","id":1079641,"emailhash":"!http://i.stack.imgur.com/P7SUG.jpg?s=128\u0026g=1","lastPost":1427849604},{"name":"phenomnomnominal","id":1386166,"emailhash":"7ea079654bb159fdaa4043834688f57d","lastPost":1427849332},{"name":"monners","id":1514572,"emailhash":"8e44332313cc7335e98748739977ea5d","lastPost":1427848152}],"messages":[{"date":1427850996,"user":"Bergi","userid":1048572}],"singleImage":false,"tags":["cereal","david-programming","ecmascript","es6","javascript","we-so-excited"]}]} 
+        };
+
+        StackExchange.chatAd.init(options);
+    });
+// -->
+</script>
+
+</div>  
+    
+            
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/12086024?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">2
+    </div>
+</a><a href="http://stackoverflow.com/questions/12086024/how-to-click-a-button-in-selenium-webdriver-with-java-using-jquery?rq=1" class="question-hyperlink">How to click a button in Selenium WebDriver with Java using jQuery</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/15942101?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">1
+    </div>
+</a><a href="http://stackoverflow.com/questions/15942101/dynamic-table-data-retrieve-selenium-webdriver?rq=1" class="question-hyperlink">dynamic table data retrieve - selenium webdriver</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/21668684?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/21668684/how-to-run-a-test-in-testng-using-selenium-webdriver?rq=1" class="question-hyperlink">How to run a test in testNG using Selenium WebDriver?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/23220293?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/23220293/selenium-webdriver-java-testng-select-date-from-a-date-pickerdate-fitler-and?rq=1" class="question-hyperlink">Selenium webdriver,java, testng- Select date from a date picker(Date fitler) and click Apply button t</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/24719614?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/24719614/how-to-make-the-click-work-in-selenium-webdriver?rq=1" class="question-hyperlink">How to make the click() work in Selenium WebDriver?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/24756758?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/24756758/how-can-we-test-a-web-application-in-different-languagenot-english-using-selen?rq=1" class="question-hyperlink">How can we test a web application in different language(not english) using selenium webdriver in Java</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/24778468?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">3
+    </div>
+</a><a href="http://stackoverflow.com/questions/24778468/how-to-count-number-of-images-available-on-a-web-page-using-selenium-webdriver?rq=1" class="question-hyperlink">How to count number of images available on a web page using selenium webdriver?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/25685387?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/25685387/selenium-webdriver-behaviordoes-it-hangs-or-something?rq=1" class="question-hyperlink">selenium webdriver behavior:does it hangs or something?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/26508193?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/26508193/how-can-i-integrate-selenide-with-existing-selenium-webdriver-code?rq=1" class="question-hyperlink">How can i Integrate Selenide with existing selenium webdriver code?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/27110534?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/27110534/how-fetch-all-links-and-click-those-links-one-by-one-using-webdriver?rq=1" class="question-hyperlink">How fetch all links and click those links one by one using WEBDRIVER</a>
+</div>
+
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="http://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-vi" title="Vi and Vim Stack Exchange"></div><a href="http://vi.stackexchange.com/questions/2796/how-to-achieve-selection-different-length-of-texts-on-different-lines" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:599 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to achieve selection different length of texts on different lines?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/58888/how-can-i-allow-one-character-to-sneak-off-and-assassinate-an-npc-without-boring" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How can I allow one character to sneak off and assassinate an NPC without boring the other players?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/84970/if-a-web-site-shows-my-what-my-password-was-changed-to-is-it-stored-as-plain-te" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    If a web site shows my what my password was changed to, is it stored as plain text?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/58881/can-a-longbow-be-stored-in-a-glove-of-storing" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can a longbow be stored in a glove of storing?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-music" title="Music: Practice &amp; Theory Stack Exchange"></div><a href="http://music.stackexchange.com/questions/31250/how-can-i-learn-to-read-bass-clef-score-more-naturally" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:240 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How can I learn to read bass clef score more naturally?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/11322/male-and-female-spiders-on-an-infinite-web" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Male and female spiders on an infinite web
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/42691/how-should-you-refer-to-yourself-in-a-paper" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How should you refer to yourself in a paper?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/85133/why-is-worf-in-the-undiscovered-country" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why is Worf in The Undiscovered Country?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-space" title="Space Exploration Stack Exchange"></div><a href="http://space.stackexchange.com/questions/8616/could-steam-be-used-as-a-efficient-power-source-for-a-space-craft" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:508 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Could steam be used as a efficient power source for a space craft?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/43515/uncomfortable-race-comments-in-workplace" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:423 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Uncomfortable race comments in workplace
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-parenting" title="Parenting Stack Exchange"></div><a href="http://parenting.stackexchange.com/questions/19221/how-do-i-convince-my-daughter-to-agree-that-i-want-to-quit-my-job-and-not-strain" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:228 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How do I convince my daughter to agree that I want to quit my job and not strain our mother-daughter relationship?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-diy" title="Home Improvement Stack Exchange"></div><a href="http://diy.stackexchange.com/questions/62949/is-there-any-difference-in-home-electrical-outlets" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:73 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is there any difference in home electrical outlets?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/193575/getting-the-pids-of-a-program-line-by-line" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:106 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Getting the pid's of a program line by line
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/13718/why-dont-black-boxes-send-a-signal-when-above-water" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:528 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why don't black boxes send a signal when above water?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-mathematica" title="Mathematica Stack Exchange"></div><a href="http://mathematica.stackexchange.com/questions/78726/how-can-i-get-from-a-list-of-characters-representing-a-permutation-to-graphics-s" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:387 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How can I get from a list of characters representing a permutation to graphics showing the cycles?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/236408/are-there-english-figurative-expressions-equivalent-to-japanese-idiom-%e9%a6%ac%e8%80%b3%e6%9d%b1%e9%a2%a8-meani" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Are there English figurative expressions equivalent to Japanese idiom 馬耳東風 meaning a person who doesn’t listen to other’s advice?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/13715/which-precautions-should-i-take-when-flying-in-very-cold-hot-weather" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:528 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Which precautions should I take when flying in very cold / hot weather?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/173281/in-circular-motion-with-a-constant-distance-why-does-the-mass-of-the-orbitting" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:151 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    In circular motion, with a constant distance, why does the mass of the orbitting object have no effect on its revolution at all?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/84894/why-dont-popular-web-services-mask-the-cvv" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why don't popular web services mask the CVV?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/13394/could-a-modern-times-time-traveler-produce-an-antibiotic-in-medieval-times" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Could a modern times time traveler produce an antibiotic in medieval times?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/11267/two-sheriffs-and-eavesdroppers" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Two Sheriffs and Eavesdroppers
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/11349/beneath-the-waves" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Beneath the Waves
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-apple" title="Ask Different"></div><a href="http://apple.stackexchange.com/questions/179088/i-have-two-macs-on-the-same-apple-id-sharing-issue" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:118 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    I have two Macs on the same Apple ID. Sharing issue
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/173469/why-should-conservative-forces-have-their-curl-equal-to-zerointuition" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:151 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why should Conservative forces have their curl equal to zero?(intuition)
+                </a>
+
+            </li>
+    </ul>
+
+        
+</div>
+		</div>
+	
+<div id="feed-link">
+    <div id="feed-link-text">
+        <a href="http://stackoverflow.com/feeds/question/13448091" title="feed of this question and its answers">
+            <span class="feed-icon"></span>question feed
+        </a>
+    </div>
+</div>	<script>
+StackExchange.ready(function(){$.get('/posts/13448091/ivc/685c');});
+</script>
+<noscript>
+    &lt;div&gt;&lt;img src="/posts/13448091/ivc/685c" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;
+</noscript><div style="display:none" id="prettify-lang">lang-java</div></div>
+
+
+
+        </div>
+    </div>
+    <div id="footer" class="categories">
+        <div class="footerwrap">
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                        <a href="http://stackoverflow.com/tour">tour</a>
+                    <a href="http://stackoverflow.com/help">help</a>
+                    <a href="http://blog.stackoverflow.com/?blb=1">blog</a>
+                        <a href="http://chat.stackoverflow.com/">chat</a>
+                    <a href="http://data.stackexchange.com/">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackexchange.com/work-here">work here</a>
+                    <a href="http://stackexchange.com/mediakit">advertising info</a>
+
+                    <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a>
+                    <b><a href="http://stackoverflow.com/contact">contact us</a></b>
+                        <b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="3">
+                Technology
+            </th>
+            <th>
+                Life / Arts
+            </th>
+            <th>
+                Culture / Recreation
+            </th>
+            <th>
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="http://serverfault.com/" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://programmers.stackexchange.com/" title="professional programmers interested in conceptual questions about software development">Programmers</a></li>
+                        <li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems.">Unix &amp; Linux</a></li>
+                        <li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Development</a></li>
+                        <li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="http://security.stackexchange.com/" title="Information security professionals">Information Security</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="http://mathematica.stackexchange.com/" title="users of Mathematica">Mathematica</a></li>
+                        <li><a href="http://salesforce.stackexchange.com/" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (14)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="http://graphicdesign.stackexchange.com/" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="http://money.stackexchange.com/" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                        <li><a href="http://academia.stackexchange.com/" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (10)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (21)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="http://stats.stackexchange.com/" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (7)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="http://meta.stackexchange.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="http://careers.stackoverflow.com/">Stack Overflow Careers</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+
+            <div id="copyright">
+                site design / logo © 2015 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2015.4.1.2428
+            </div>
+            
+        </div>
+    </div>
+    <noscript>
+        &lt;div id="noscript-warning"&gt;Stack Overflow works best with JavaScript enabled&lt;img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;&lt;/div&gt;
+    </noscript>
+<script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+<script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    ados.run.push(function () { ados_setKeywords('java,selenium-webdriver,testng');; ados_load(); });         
+</script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-1');        
+        
+        ga('set', 'dimension2', '|java|selenium-webdriver|testng|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>                
+    
+<script type="text/javascript" src="./cuba1_files/p"></script></body></html>

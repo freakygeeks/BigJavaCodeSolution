@@ -1,0 +1,3 @@
+java RootApproximatorHarness1
+java RootApproximatorHarness2
+java RootApproximatorHarness3

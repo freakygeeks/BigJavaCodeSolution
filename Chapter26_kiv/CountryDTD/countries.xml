@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE countries SYSTEM "countries.dtd">
+<countries>
+	<country>
+		<name>USA</name>
+			<population>3029400</population>
+			<area>570495</area>
+	</country>
+	<country>
+		<name>China</name>
+			<population>709429400</population>
+			<area>530393</area>
+	</country>
+	<country>
+		<name>India</name>
+			<population>55029400</population>
+			<area>350554</area>
+	</country>
+	<country>
+		<name>Canada</name>
+			<population>4289400</population>
+			<area>400234</area>
+	</country>
+</countries>

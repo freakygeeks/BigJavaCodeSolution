@@ -1,0 +1,8 @@
+<!ELEMENT commands (add*, remove*)>
+<!ELEMENT add (appointment)>
+<!ELEMENT remove (appointment)>
+<!ELEMENT appointment (description, day, from, to)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT day (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT to (#PCDATA)>

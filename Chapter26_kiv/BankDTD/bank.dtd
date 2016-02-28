@@ -1,0 +1,4 @@
+<!ELEMENT bank (account*)>
+<!ELEMENT account (number, balance)>
+<!ELEMENT number (#PCDATA)>
+<!ELEMENT balance (#PCDATA)>

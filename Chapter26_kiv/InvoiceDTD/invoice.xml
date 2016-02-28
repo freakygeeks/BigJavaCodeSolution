@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE invoice SYSTEM "invoice.dtd">
+<invoice>
+   <number>11365</number>
+   <shipto>
+      <name>John Meyers</name>
+	  <company>ACME Computer Supplies Inc.</company>
+	  <street>1195 W. Fairfield Rd.</street>
+	  <city>Sunnyvale</city>
+	  <state>CA</state>
+	  <zip>94085</zip>
+   </shipto>
+   <billto>
+      <name>Accounts Payable</name>
+	  <company>ACME Computer Supplies Inc.</company>
+	  <street>P.O. Box 11098</street>
+	  <city>Sunnyvale</city>
+	  <state>CA</state>
+	  <zip>94080-1098</zip>
+   </billto>   
+   <items>
+      <item>
+         <product>
+            <description>Hair dryer</description>
+            <price>29.95</price>
+         </product>
+        <quantity>8</quantity>
+      </item>
+      <item>
+         <product>
+            <description>4-port Mini Hub</description>
+            <price>19.95</price>
+         </product>
+        <quantity>4</quantity>
+      </item>
+   </items>
+</invoice>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE purse SYSTEM "purse.dtd">
+<purse>
+	<coin>
+		<value>0.5</value>
+		<name>half dollar</name>
+	</coin>
+	<coin>
+		<value>0.5</value>
+		<name>half dollar</name>
+	</coin>
+	<coin>
+		<value>0.25</value>
+		<name>quarter</name>
+	</coin>
+</purse>
+

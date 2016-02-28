@@ -1,0 +1,5 @@
+http://cs.lmu.edu/~ray/notes/javanetexamples/
+http://math.hws.edu/eck/cs124/javanotes3/c10/s5.html
+https://docs.oracle.com/javase/tutorial/networking/sockets/clientServer.html
+http://www.ntu.edu.sg/home/ehchua/programming/webprogramming/HTTP_Basics.html
+http://math.hws.edu/javanotes/c12/s5.html

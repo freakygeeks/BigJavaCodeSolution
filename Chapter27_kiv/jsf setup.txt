@@ -1,0 +1,33 @@
+http://examples.javacodegeeks.com/enterprise-java/jsf/hello-world-example-with-jsf-2-0/
+http://www.mkyong.com/jsf2/jsf-2-0-hello-world-example/
+http://www.tutorialspoint.com/jsf/jsf_environment_setup.htm
+http://www.exadel.com/tutorial/jsf/jsftutorial-kickstart.html
+http://www.coreservlets.com/Apache-Tomcat-Tutorial/development-environment.html
+https://computingat40s.wordpress.com/creating-a-simple-jsf-web-application-from-the-ground/
+http://viralpatel.net/blogs/tutorial-creating-javaserver-faces-jsf-application-in-eclipse-jsf-project-jsf-tutorial/
+https://dev.liferay.com/discover/portal/-/knowledge_base/6-1/errata-for-using-liferay-portal-6-1#adding-mojarra-to-tomcat-7
+http://www.javacodegeeks.com/2013/10/jsf-tomcat-configuration-example.html
+http://www.horstmann.com/bigj2/tomcat-jsf.html
+http://www.theserverside.com/tutorial/Slingshot-Yourself-into-JavaServer-Faces-20-Learning-JSF
+http://www.coderanch.com/t/526882/JSF/java/Started-JavaServer-Faces-Text-Video#2389073
+http://www.skill-guru.com/blog/2009/08/10/jsf-tutorial-for-beginners/
+https://books.google.com.my/books?id=wLbw97cDJeAC&pg=PA20&lpg=PA20&dq=update+jsf+jar+in+classpath&source=bl&ots=By7UK9QBXG&sig=E5BZg_YnfAzwjNPhzCWQjAJR5gk&hl=en&sa=X&ei=UgmaVYf6KciRuASQxoywDw&redir_esc=y#v=onepage&q=update%20jsf%20jar%20in%20classpath&f=false
+
+==========================working jsf setup===============================
+http://www.skill-guru.com/blog/2009/08/10/jsf-tutorial-for-beginners/
+http://www.mkyong.com/jsf2/jsf-2-0-hello-world-example/
+http://www.theserverside.com/tutorial/Slingshot-Yourself-into-JavaServer-Faces-20-Learning-JSF
+http://www.coderanch.com/t/526882/JSF/java/Started-JavaServer-Faces-Text-Video#2389073
+https://books.google.com.my/books?id=wLbw97cDJeAC&pg=PA20&lpg=PA20&dq=update+jsf+jar+in+classpath&source=bl&ots=By7UK9QBXG&sig=E5BZg_YnfAzwjNPhzCWQjAJR5gk&hl=en&sa=X&ei=UgmaVYf6KciRuASQxoywDw&redir_esc=y#v=onepage&q=update%20jsf%20jar%20in%20classpath&f=false
+http://bmharwani.com/dateconverter.htm
+http://viralpatel.net/blogs/tutorial-creating-javaserver-faces-jsf-application-in-eclipse-jsf-project-jsf-tutorial/
+https://docs.oracle.com/cd/E19575-01/821-0186/geyvr/index.html
+
+===========================mysql and tomcat setup========================
+http://jotm.objectweb.org/current/jotm/doc/howto-tomcat-jotm.html
+http://stackoverflow.com/questions/16218663/how-to-access-jndi-data-source-defined-in-weblogic-10-3-6
+http://stackoverflow.com/questions/10534826/javax-naming-namingexception-cannot-create-resource-instance
+https://confluence.atlassian.com/display/CONF56/Configuring+a+MySQL+Datasource+in+Apache+Tomcat
+http://www.captaindebug.com/2011/07/installing-mysql-datasource-on-tomcat-7.html#.VZ0Ida6qo1I
+https://netbeans.org/kb/docs/web/mysql-webapp.html
+http://www.albeesonline.com/blog/2008/08/06/creating-and-configuring-a-mysql-datasource-in-glassfish-application-server/

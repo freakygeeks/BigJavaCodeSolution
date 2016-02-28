@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE glassfish-web-app PUBLIC 
+"-//GlassFish.org//DTD GlassFish Application Server 3.1 Servlet 3.0//EN"
+ "http://glassfish.org/dtds/glassfish-web-app_3_0-1.dtd">
+<glassfish-web-app error-url="">
+    <parameter-encoding default-charset="UTF-8" />
+	<!-- <context-root>E:\glassfish4\glassfish\domains\domain1\autodeploy\</context-root> -->
+	<class-loader delegate="true"/>
+    <!-- Here is the problem, you should have your path of "dir" to the 
+    containing folder you wish to share, so in "from" you set the name of the 
+    folder and that is all, you should be able to access to the contents of
+    the folder -->
+	<jsp-config>
+		<property name="alternatedocroot_1" value="from=/RollDiceGIF/images/* dir=F:\var\webapp\"></property>
+    </jsp-config>
+	<!-- in this case, the contaning folder is D:\ and the folder to share is 
+    "media" so the requests to "localhost:8080/MyApplication/media/" should 
+    redirect to D:\media\ -->
+</glassfish-web-app>

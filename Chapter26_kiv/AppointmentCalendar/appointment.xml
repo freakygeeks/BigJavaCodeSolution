@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE appointment SYSTEM "appointment.dtd">
+<appointments>
+   <appointment>
+      <description>Dentist</description>
+	  <day>2001/10/24</day>
+	  <from>17:30</from>
+	  <to>18:30</to>
+   </appointment>
+   <appointment>
+      <description>CS151</description>
+	  <day>2002/1/24</day>
+	  <from>12:30</from>
+	  <to>2:30</to>
+   </appointment>
+   <appointment>
+      <description>Movie</description>
+	  <day>2002/6/24</day>
+	  <from>20:30</from>
+	  <to>22:30</to>
+   </appointment>   
+</appointments>

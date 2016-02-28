@@ -1,0 +1,3 @@
+CREATE TABLE BankAccount(ano INTEGER(4) PRIMARY KEY, interestRate DECIMAL(3,2), balance DECIMAL(30,2));
+INSERT INTO BankAccount VALUES(1, .10, 38);
+INSERT INTO BankAccount VALUES(2, .33, 1000);

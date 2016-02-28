@@ -1,0 +1,6 @@
+<!ELEMENT appointments (appointment*)>
+<!ELEMENT appointment (description, day, from, to)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT day (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT to (#PCDATA)>

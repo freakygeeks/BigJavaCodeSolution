@@ -1,0 +1,16 @@
+<!ELEMENT invoice (shipto*)>
+<!ELEMENT shipto (name, company, street, city, state, zip)>
+<!ELEMENT billto (name, company, street, city, state, zip)>
+<!ELEMENT items (item, product, description, price, quantity)>
+<!ELEMENT number (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT company (#PCDATA)>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT state (#PCDATA)>
+<!ELEMENT zip (#PCDATA)>
+<!ELEMENT item (null)>
+<!ELEMENT product (null)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT quantity (#PCDATA)>
